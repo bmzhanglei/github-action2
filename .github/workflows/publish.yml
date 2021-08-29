@@ -18,7 +18,7 @@ jobs:
       
       - name: 安装node.js
         # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
           node-version: 14.0.0
 
@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: 部署github网站
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: master
