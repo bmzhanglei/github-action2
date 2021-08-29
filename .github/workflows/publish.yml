@@ -31,13 +31,12 @@ jobs:
         run: npm run build
 
       - name: 部署github网站
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@master
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: dist
-          BUILD_SCRIPT: npm install && npm run build
-          CLEAN: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: master
+          folder: dist
+          clean: true
       # 发布到腾讯云
       # - name: 发布到腾讯云
       #   uses: easingthemes/ssh-deploy@v2.1.6        
