@@ -1,4 +1,4 @@
 module.exports = {
-    outputDir:"dist",
-    publicPath:process.env.NODE_ENV==="production"? "/github-action2/":"/"
+    outputDir:"./dist",
+    publicPath:process.env.NODE_ENV!=="production"?"/": "/github-action2/"
 }
