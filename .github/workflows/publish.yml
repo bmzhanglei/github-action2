@@ -36,7 +36,6 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: master
           folder: dist
-          clean: true
       # 发布到腾讯云
       # - name: 发布到腾讯云
       #   uses: easingthemes/ssh-deploy@v2.1.6        
